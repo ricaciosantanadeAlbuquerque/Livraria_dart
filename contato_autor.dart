@@ -14,4 +14,11 @@ class ContatoAutor {
   String? get contato => this._contato;
 
   void set contato(String? contato) => this._contato = contato;
+
+  void mostrarContato() {
+    print(toString());
+  }
+
+  @override
+  String toString() => 'Tipo:$tipo, contato>:$contato';
 }
