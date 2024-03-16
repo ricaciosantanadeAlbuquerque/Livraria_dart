@@ -15,5 +15,6 @@ class Editora {
 
   void set contato(String? contato) => this._contato = contato;
 
-  
+  @override
+  String toString() => 'tipo:$tipo, contato:$contato';
 }
