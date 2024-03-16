@@ -1,24 +1,24 @@
 class Editora {
-  String? _tipo;
-  String? _contato;
+  String? _nome;
+  String? _email;
 
-  Editora({required String tipo, required String contato}) {
-    this.tipo = tipo;
-    this.contato = contato;
+  Editora({required String nome, required String email}) {
+    this.nome = nome;
+    this.email = email;
   }
 
-  String? get tipo => this._tipo;
+  String? get nome => this._nome;
 
-  void set tipo(String? tipo) => this._tipo = tipo;
+  void set nome(String? nome) => this._nome = nome;
 
-  String? get contato => this._contato;
+  String? get email => this._email;
 
-  void set contato(String? contato) => this._contato = contato;
+  void set email(String? email) => this._email = email;
 
-  void mostrarContato() {
-    toString();
+  void consultar() {
+    print(toString()); // chamada ao método toString()
   }
 
   @override
-  String toString() => 'tipo:$tipo, contato:$contato';
+  String toString() => 'Nome:$nome, Email:$email';
 }
