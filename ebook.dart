@@ -2,7 +2,10 @@ class Ebook {
   String? _formato;
   String? _arquivo;
 
-  Ebook();
+  Ebook({required String formato, required String arquivi}) {
+    this._formato = formato;
+    this._arquivo = formato;
+  }
 
   String? get formato => this._formato;
 
