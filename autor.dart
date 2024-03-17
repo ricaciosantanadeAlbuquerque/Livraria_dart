@@ -5,6 +5,7 @@ class Autor {
   List<ContatoAutor> _listContato = [];
 
   Autor({required String nome, required String tipo, required String contato}) {
+    this.nome = nome;
     criarContato(tipo: tipo, contato: contato);
   }
 
@@ -29,4 +30,7 @@ class Autor {
       contato.mostrarContato();
     }
   }
+
+  @override
+  String toString() => 'Nome:$nome, lista de contatos:${listContato}';
 }
