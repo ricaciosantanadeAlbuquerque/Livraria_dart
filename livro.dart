@@ -7,7 +7,11 @@ abstract class Livro {
   Editora? _editora;
   List<Autor> _listAutor = [];
 
-  Livro({required String titulo, required int anoPublicacao, required Editora editora}) {}
+  Livro({required String titulo, required int anoPublicacao, required Editora editora}) {
+    this.titulo = titulo;
+    this.anoPublicacao = anoPublicacao;
+    this.editora = editora;
+  }
 
   String? get titulo => this._titulo;
 
@@ -39,5 +43,6 @@ abstract class Livro {
     }
   }
 
-
+  @override
+  String toString() => 'Título:$titulo, Ano/Publicação:$anoPublicacao,  Editora:${this.editora.toString()} autores:${this.listAutor}';
 }
