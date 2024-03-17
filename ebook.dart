@@ -1,8 +1,11 @@
-class Ebook {
+import 'editora.dart';
+import 'livro.dart';
+
+class Ebook extends Livro {
   String? _formato;
   String? _arquivo;
 
-  Ebook({required String formato, required String arquivi}) {
+  Ebook({required String formato, required String arquivi,required String titulo,required int anoPublicacao,required Editora editora}) :super(titulo: titulo,anoPublicacao: anoPublicacao,editora: editora) {
     this.formato = formato;
     this.arquivo = formato;
   }
@@ -20,5 +23,5 @@ class Ebook {
   }
 
   @override
-  String toString() => 'Formato:$formato, Arquivo:$arquivo';
+  String toString() => 'Formato:$formato, Arquivo:$arquivo ' + super.toString();
 }

@@ -44,5 +44,5 @@ abstract class Livro {
   }
 
   @override
-  String toString() => 'Título:$titulo, Ano/Publicação:$anoPublicacao,  Editora:${this.editora.toString()} autores:${this.listAutor}';
+  String toString() => ' Título:$titulo, Ano/Publicação:$anoPublicacao,  Editora:${this.editora.toString()} autores:${this.listAutor} ';
 }
