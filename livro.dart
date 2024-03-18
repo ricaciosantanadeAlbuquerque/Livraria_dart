@@ -39,10 +39,11 @@ abstract class Livro {
 
   void listarAutor() {
     for (var autor in listAutor) {
+      print(autor.nome);
       autor.listarContatos();
     }
   }
 
   @override
-  String toString() => 'Título:$titulo, Ano/Publicação:$anoPublicacao,  Editora:${this.editora.toString()} autores:${this.listAutor}';
+  String toString() => ' Título:$titulo, Ano/Publicação:$anoPublicacao,  Editora:${this.editora.toString()} autores:${this.listAutor} ';
 }
