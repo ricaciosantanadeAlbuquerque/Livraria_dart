@@ -39,6 +39,7 @@ abstract class Livro {
 
   void listarAutor() {
     for (var autor in listAutor) {
+      print(autor.nome);
       autor.listarContatos();
     }
   }

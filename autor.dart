@@ -18,7 +18,8 @@ class Autor {
   void set listContato(List<ContatoAutor> listContato) => this._listContato = listContato;
 
   void criarContato({required String tipo, required String contato}) {
-    listContato.add(ContatoAutor(tipo: tipo, contato: contato));
+    var contatoObjeto = ContatoAutor(tipo: tipo, contato: contato);
+    listContato.add(contatoObjeto);
   }
 
   void removerContato() {
@@ -32,5 +33,5 @@ class Autor {
   }
 
   @override
-  String toString() => 'Nome:$nome, lista de contatos:${listContato}';
+  String toString() => 'Nome:$nome, lista de contatos:${this.listContato}';
 }
