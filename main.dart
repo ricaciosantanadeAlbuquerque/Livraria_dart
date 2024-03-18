@@ -3,7 +3,6 @@ import 'ebook.dart';
 import 'editora.dart';
 
 void main() {
-
   Editora editora = Editora(nome: 'Saraiva', email: 'saraiva_jpe@gmail.com');
   // editora.consultar();
   // o objeto Editora(), está associado com o objeto Ebook()
@@ -41,5 +40,20 @@ void main() {
   ebook2.listarAutor();
 
   // autor2, está sendo compartilhado entre ebook e ebook2
+  print('');
+  print(identical(ebook, ebook2) ? 'Os Objetos são iguais' : 'Não são iguais');
 
+  ebook.removerAutor();
+  print('========================');
+  print('');
+  print('========================');
+  print(ebook.toString());
+  print('========================');
+  print('');
+  print('========================');
+  ebook2.removerAutor();
+  print('========================');
+  print('');
+  print('========================');
+  print(ebook2.toString());
 }
